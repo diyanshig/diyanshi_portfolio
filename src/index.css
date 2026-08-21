@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Smooth navigation scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Prevent horizontal movement */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #020617;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Better anchor positioning with navbar */
+section {
+  scroll-margin-top: 80px;
+}
