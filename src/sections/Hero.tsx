@@ -10,11 +10,11 @@ function Hero() {
       className="relative min-h-[calc(100vh-76px)] flex items-center pt-20 overflow-hidden bg-[#FAF8F1]"
     >
       {/* Background Glow */}
-      <div className="absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full bg-[#C8BC55]/15 blur-[120px]" />
+      <div className="absolute -top-32 -left-32 w-[400px] h-[400px] rounded-full bg-[#C8BC55]/15 blur-[120px]" />
 
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#8C8426]/10 blur-[130px]" />
 
-      <div className="max-w-6xl w-full mx-auto px-6 sm:px-8 lg:px-10 grid lg:grid-cols-2 gap-10 xl:gap-14 items-center">
+      <div className="max-w-[1200px] w-full mx-auto px-6 sm:px-8 lg:px-10 grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
 
         {/* LEFT */}
         <motion.div
@@ -37,11 +37,11 @@ function Hero() {
             wrapper="p"
             speed={50}
             repeat={Infinity}
-            className="uppercase tracking-[0.25em] text-[#8C8426] font-bold text-sm sm:text-base lg:text-lg"
+            className="uppercase tracking-[0.25em] text-[#8C8426] font-bold text-base lg:text-lg"
           />
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mt-5 leading-tight text-[#202020]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mt-5 leading-tight text-[#202020]">
             Hi, I'm
             <br />
 
@@ -56,7 +56,7 @@ function Hero() {
           </h2>
 
           {/* Description */}
-          <p className="mt-5 text-sm sm:text-base lg:text-base text-[#5F5F5F] leading-7 max-w-xl">
+          <p className="mt-5 text-sm lg:text-base text-[#5F5F5F] leading-7 max-w-lg">
             Computer Science student specializing in Cybersecurity
             with a passion for Full Stack Development, Artificial
             Intelligence, and building modern, scalable,
@@ -64,25 +64,25 @@ function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-8">
+          <div className="flex flex-wrap gap-4 mt-9">
             <a
               href="/Diyanshi_Gupta_resume.pdf"
               download="Diyanshi_Gupta_resume.pdf"
-              className="bg-[#5A561F] hover:bg-[#444114] text-[#FFFDF6] px-6 py-3 rounded-lg text-sm lg:text-base font-semibold shadow-lg transition duration-300 hover:scale-105"
+              className="bg-[#5A561F] hover:bg-[#444114] text-[#FFFDF6] px-6 py-3 rounded-xl text-sm lg:text-base font-semibold shadow-lg transition duration-300 hover:scale-105"
             >
               Download Resume
             </a>
 
             <a
               href="#contact"
-              className="border-2 border-[#8C8426] text-[#5A561F] hover:bg-[#5A561F] hover:text-white px-7 py-3 rounded-lg text-sm lg:text-base font-semibold transition-all duration-300 hover:scale-105"
+              className="border-2 border-[#8C8426] text-[#5A561F] hover:bg-[#5A561F] hover:text-white px-7 py-3 rounded-xl text-base font-semibold transition-all duration-300 hover:scale-105"
             >
               Contact Me
             </a>
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-4 mt-8">
+          <div className="flex gap-5 mt-9">
             <a
               href="https://github.com/diyanshig"
               target="_blank"
@@ -107,7 +107,7 @@ function Hero() {
 
         {/* RIGHT */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
+          initial={{ opacity: 0, scale: 0.85, y: 20 }}
           animate={{
             opacity: 1,
             scale: 1,
@@ -125,7 +125,7 @@ function Hero() {
             <div className="absolute inset-0 rounded-full bg-[#C8BC55] blur-[80px] opacity-25" />
 
             {/* Profile Ring */}
-            <div className="w-[280px] h-[280px] sm:w-[330px] sm:h-[330px] lg:w-[380px] lg:h-[380px] xl:w-[400px] xl:h-[400px] rounded-full bg-gradient-to-r from-[#8C8426] via-[#C8BC55] to-[#5A561F] p-[5px] shadow-2xl">
+            <div className="w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[360px] lg:h-[360px] xl:w-[400px] xl:h-[400px] rounded-full bg-gradient-to-r from-[#8C8426] via-[#C8BC55] to-[#5A561F] p-[5px] shadow-2xl">
 
               <div className="w-full h-full rounded-full overflow-hidden bg-[#FAF8F1]">
                 <img
@@ -144,4 +144,4 @@ function Hero() {
   );
 }
 
-export default Hero;``
+export default Hero;
