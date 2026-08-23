@@ -38,6 +38,7 @@ function Chatbot() {
     setLoading(true);
 
     try {
+      // KEEP THIS EXACTLY AS IT IS FOR VERCEL
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
@@ -85,26 +86,26 @@ function Chatbot() {
   return (
     <section
       id="chatbot"
-      className="py-32 lg:py-36 bg-[#FAF8F1]"
+      className="py-20 lg:py-24 bg-[#FAF8F1]"
     >
-      <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-[1100px] mx-auto px-6 sm:px-8 lg:px-12">
 
         {/* ================= HEADING ================= */}
 
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
 
-          <p className="uppercase tracking-[0.3em] text-[#8C8426] font-black text-4xl sm:text-5xl lg:text-5xl">
+          <p className="uppercase tracking-[0.25em] text-[#8C8426] font-bold text-base lg:text-lg">
             AI ASSISTANT
           </p>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mt-5 text-[#222222]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mt-4 text-[#222222]">
             Chat With
             <span className="text-[#5A561F]"> Mini Me</span>
           </h2>
 
-          <div className="w-24 h-1.5 bg-[#8C8426] rounded-full mx-auto mt-7" />
+          <div className="w-20 h-1 bg-[#8C8426] rounded-full mx-auto mt-5" />
 
-          <p className="text-[#666666] text-lg lg:text-xl mt-7 max-w-3xl mx-auto leading-8">
+          <p className="text-[#666666] text-base lg:text-lg mt-6 max-w-3xl mx-auto leading-8">
             Have a question about my projects, skills, certifications,
             or experience? Ask my AI assistant.
           </p>
@@ -113,22 +114,22 @@ function Chatbot() {
 
         {/* ================= CHAT BOX ================= */}
 
-        <div className="bg-white rounded-3xl border border-[#DDD5B8] shadow-xl overflow-hidden">
+        <div className="bg-white rounded-2xl border border-[#DDD5B8] shadow-xl overflow-hidden">
 
           {/* ================= CHAT HEADER ================= */}
 
-          <div className="bg-[#5A561F] px-7 py-6 flex items-center gap-5">
+          <div className="bg-[#5A561F] px-6 py-5 flex items-center gap-4">
 
-            <div className="w-14 h-14 rounded-full bg-[#C8BC55] flex items-center justify-center text-[#3F3A20]">
-              <FaRobot size={25} />
+            <div className="w-12 h-12 rounded-full bg-[#C8BC55] flex items-center justify-center text-[#3F3A20]">
+              <FaRobot size={21} />
             </div>
 
             <div>
-              <h3 className="text-white text-2xl lg:text-3xl font-bold">
+              <h3 className="text-white text-xl lg:text-2xl font-bold">
                 Mini Me
               </h3>
 
-              <p className="text-[#E8E4D4] text-lg lg:text-xl">
+              <p className="text-[#E8E4D4] text-sm lg:text-base">
                 Ask me anything about Diyanshi
               </p>
             </div>
@@ -137,7 +138,7 @@ function Chatbot() {
 
           {/* ================= MESSAGES ================= */}
 
-          <div className="h-[480px] lg:h-[520px] overflow-y-auto p-8 space-y-6 bg-[#FCFBF7]">
+          <div className="h-[400px] lg:h-[440px] overflow-y-auto p-6 space-y-4 bg-[#FCFBF7]">
 
             {messages.map((message, index) => (
               <div
@@ -150,7 +151,7 @@ function Chatbot() {
               >
 
                 <div
-                  className={`max-w-[82%] px-7 py-5 rounded-2xl text-xl lg:text-2xl leading-9 ${
+                  className={`max-w-[82%] px-5 py-3.5 rounded-2xl text-base lg:text-lg leading-7 ${
                     message.sender === "user"
                       ? "bg-[#5A561F] text-white rounded-br-md"
                       : "bg-white text-[#444444] border border-[#E7E2D6] rounded-bl-md"
@@ -166,7 +167,7 @@ function Chatbot() {
 
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-white border border-[#E7E2D6] px-5 py-4 rounded-2xl text-lg lg:text-xl text-[#777777]">
+                <div className="bg-white border border-[#E7E2D6] px-4 py-3 rounded-2xl text-sm lg:text-base text-[#777777]">
                   Thinking...
                 </div>
               </div>
@@ -176,21 +177,21 @@ function Chatbot() {
 
           {/* ================= SUGGESTED QUESTIONS ================= */}
 
-          <div className="px-6 lg:px-7 pt-7 bg-white">
+          <div className="px-6 lg:px-7 pt-6 bg-white">
 
-            <p className="text-2xl lg:text-3xl font-bold text-[#666666] mb-5">
+            <p className="text-lg lg:text-xl font-bold text-[#666666] mb-4">
               Try asking:
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
 
               {suggestedQuestions.map((question) => (
                 <button
                   key={question}
                   onClick={() => sendMessage(question)}
                   disabled={loading}
-                  className="px-6 py-4 rounded-full border-2 border-[#DDD5B8]
-                             text-lg lg:text-xl font-semibold text-[#5A561F]
+                  className="px-4 py-2.5 rounded-full border border-[#DDD5B8]
+                             text-sm lg:text-base font-semibold text-[#5A561F]
                              bg-[#FCFBF7]
                              hover:bg-[#F3EFD8]
                              hover:border-[#C8BC55]
@@ -208,9 +209,9 @@ function Chatbot() {
 
           {/* ================= INPUT ================= */}
 
-          <div className="p-7 lg:p-8 border-t border-[#E7E2D6] bg-white">
+          <div className="p-6 lg:p-7 border-t border-[#E7E2D6] bg-white">
 
-            <div className="flex gap-4">
+            <div className="flex gap-3">
 
               <input
                 type="text"
@@ -218,8 +219,8 @@ function Chatbot() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask about Diyanshi..."
-                className="flex-1 px-7 py-6 rounded-xl border border-[#DDD5B8]
-                           outline-none text-lg lg:text-xl text-[#333333]
+                className="flex-1 px-5 py-4 rounded-xl border border-[#DDD5B8]
+                           outline-none text-base lg:text-lg text-[#333333]
                            focus:border-[#8C8426]
                            focus:ring-2 focus:ring-[#C8BC55]/30"
               />
@@ -228,18 +229,18 @@ function Chatbot() {
                 onClick={() => sendMessage()}
                 disabled={loading || !input.trim()}
                 aria-label="Send message"
-                className="w-16 h-16 lg:w-[72px] lg:h-[72px] rounded-xl bg-[#5A561F] text-white
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-[#5A561F] text-white
                            flex items-center justify-center
                            hover:bg-[#444114] transition
                            disabled:opacity-50
                            disabled:cursor-not-allowed"
               >
-                <FaPaperPlane size={23} />
+                <FaPaperPlane size={18} />
               </button>
 
             </div>
 
-            <p className="text-base lg:text-lg text-[#888888] mt-5 text-center">
+            <p className="text-sm lg:text-base text-[#888888] mt-4 text-center">
               AI-powered portfolio assistant
             </p>
 

@@ -41,39 +41,36 @@ function Certifications() {
   return (
     <section
       id="certifications"
-      className="py-32 lg:py-36 bg-[#FAF8F1]"
+      className="py-14 lg:py-16 bg-[#FAF8F1]"
     >
-      <div className="max-w-[1500px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20 lg:mb-24"
+          className="text-center mb-10 lg:mb-12"
         >
-          {/* Main Section Heading */}
-          <p className="uppercase tracking-[0.3em] text-[#8C8426] font-black text-4xl sm:text-5xl lg:text-5xl">
+          <p className="uppercase tracking-[0.2em] text-[#8C8426] font-bold text-sm lg:text-base">
             CERTIFICATIONS
           </p>
 
-          {/* Supporting Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black text-[#2B2B2B] mt-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#2B2B2B] mt-4">
             Certifications & Achievements
           </h2>
 
-          {/* Divider */}
-          <div className="w-24 h-1.5 bg-[#8C8426] rounded-full mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[#8C8426] rounded-full mx-auto mt-4" />
         </motion.div>
 
         {/* Certification Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
 
           {certifications.map((certificate, index) => (
             <motion.div
               key={certificate.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
@@ -81,26 +78,26 @@ function Certifications() {
                 delay: index * 0.1,
               }}
               whileHover={{
-                y: -10,
+                y: -6,
               }}
-              className="bg-white rounded-3xl p-9 lg:p-10 min-h-[300px] border border-[#DDD5B8] shadow-md hover:shadow-2xl hover:border-[#8C8426] transition-all duration-300 flex flex-col"
+              className="bg-white rounded-2xl p-5 min-h-[200px] border border-[#DDD5B8] shadow-md hover:shadow-xl hover:border-[#8C8426] transition-all duration-300 flex flex-col"
             >
 
               {/* Icon */}
-              <div className="w-18 h-18 lg:w-20 lg:h-20 rounded-2xl bg-[#EFE9D2] flex items-center justify-center mb-7">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-[#EFE9D2] flex items-center justify-center mb-4">
                 <FaCertificate
                   className="text-[#5A561F]"
-                  size={32}
+                  size={24}
                 />
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl lg:text-[25px] font-bold text-[#2B2B2B] mb-4 leading-snug">
+              <h3 className="text-lg lg:text-xl font-bold text-[#2B2B2B] mb-2 leading-snug">
                 {certificate.title}
               </h3>
 
               {/* Issuer */}
-              <p className="text-lg text-[#666666] mb-8">
+              <p className="text-sm lg:text-base text-[#666666] mb-5">
                 {certificate.issuer}
               </p>
 
@@ -109,10 +106,10 @@ function Certifications() {
                 href={certificate.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#5A561F] text-base lg:text-lg font-semibold hover:text-[#8C8426] hover:gap-3 transition-all duration-300 mt-auto"
+                className="inline-flex items-center gap-2 text-[#5A561F] text-sm font-semibold hover:text-[#8C8426] hover:gap-3 transition-all duration-300 mt-auto"
               >
                 View Certificate
-                <FaExternalLinkAlt size={14} />
+                <FaExternalLinkAlt size={12} />
               </a>
 
             </motion.div>

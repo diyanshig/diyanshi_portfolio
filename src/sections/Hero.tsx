@@ -7,18 +7,18 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[#FAF8F1]"
+      className="relative min-h-[calc(100vh-76px)] flex items-center pt-20 overflow-hidden bg-[#FAF8F1]"
     >
       {/* Background Glow */}
-      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-[#C8BC55]/15 blur-[140px]" />
+      <div className="absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full bg-[#C8BC55]/15 blur-[120px]" />
 
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#8C8426]/10 blur-[150px]" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#8C8426]/10 blur-[130px]" />
 
-      <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+      <div className="max-w-6xl w-full mx-auto px-6 sm:px-8 lg:px-10 grid lg:grid-cols-2 gap-10 xl:gap-14 items-center">
 
         {/* LEFT */}
         <motion.div
-          initial={{ opacity: 0, x: -70 }}
+          initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -37,26 +37,26 @@ function Hero() {
             wrapper="p"
             speed={50}
             repeat={Infinity}
-            className="uppercase tracking-[0.3em] text-[#8C8426] font-bold text-xl lg:text-2xl"
+            className="uppercase tracking-[0.25em] text-[#8C8426] font-bold text-sm sm:text-base lg:text-lg"
           />
 
           {/* Main Heading */}
-          <h1 className="text-7xl md:text-8xl lg:text-[100px] font-black mt-6 leading-[0.95] text-[#202020]">
-  Hi, I'm
-  <br />
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mt-5 leading-tight text-[#202020]">
+            Hi, I'm
+            <br />
 
-  <span className="text-[#5A561F]">
-    Diyanshi Gupta
-  </span>
-</h1>
+            <span className="text-[#5A561F]">
+              Diyanshi Gupta
+            </span>
+          </h1>
 
           {/* Subtitle */}
-          <h2 className="mt-7 text-3xl lg:text-4xl font-semibold text-[#6A6424] leading-snug">
+          <h2 className="mt-5 text-xl lg:text-2xl font-semibold text-[#6A6424] leading-snug">
             Full Stack Developer & AI Enthusiast
           </h2>
 
           {/* Description */}
-          <p className="mt-8 text-xl lg:text-[22px] text-[#5F5F5F] leading-9 max-w-2xl">
+          <p className="mt-5 text-sm sm:text-base lg:text-base text-[#5F5F5F] leading-7 max-w-xl">
             Computer Science student specializing in Cybersecurity
             with a passion for Full Stack Development, Artificial
             Intelligence, and building modern, scalable,
@@ -64,33 +64,33 @@ function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-6 mt-12">
+          <div className="flex flex-wrap gap-4 mt-8">
             <a
               href="/Diyanshi_Gupta_resume.pdf"
               download="Diyanshi_Gupta_resume.pdf"
-              className="bg-[#5A561F] hover:bg-[#444114] text-[#FFFDF6] px-9 py-5 rounded-xl text-xl font-semibold shadow-lg transition duration-300 hover:scale-105"
+              className="bg-[#5A561F] hover:bg-[#444114] text-[#FFFDF6] px-6 py-3 rounded-lg text-sm lg:text-base font-semibold shadow-lg transition duration-300 hover:scale-105"
             >
               Download Resume
             </a>
 
             <a
               href="#contact"
-              className="border-2 border-[#8C8426] text-[#5A561F] hover:bg-[#5A561F] hover:text-white px-9 py-5 rounded-xl text-xl font-semibold transition-all duration-300 hover:scale-105"
+              className="border-2 border-[#8C8426] text-[#5A561F] hover:bg-[#5A561F] hover:text-white px-7 py-3 rounded-lg text-sm lg:text-base font-semibold transition-all duration-300 hover:scale-105"
             >
               Contact Me
             </a>
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 mt-12">
+          <div className="flex gap-4 mt-8">
             <a
               href="https://github.com/diyanshig"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="w-16 h-16 rounded-full border-2 border-[#8C8426] flex items-center justify-center text-[#5A561F] hover:bg-[#5A561F] hover:text-white transition duration-300 hover:scale-105"
+              className="w-12 h-12 rounded-full border-2 border-[#8C8426] flex items-center justify-center text-[#5A561F] hover:bg-[#5A561F] hover:text-white transition duration-300 hover:scale-105"
             >
-              <FaGithub size={28} />
+              <FaGithub size={22} />
             </a>
 
             <a
@@ -98,9 +98,9 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-16 h-16 rounded-full border-2 border-[#8C8426] flex items-center justify-center text-[#5A561F] hover:bg-[#5A561F] hover:text-white transition duration-300 hover:scale-105"
+              className="w-12 h-12 rounded-full border-2 border-[#8C8426] flex items-center justify-center text-[#5A561F] hover:bg-[#5A561F] hover:text-white transition duration-300 hover:scale-105"
             >
-              <FaLinkedin size={28} />
+              <FaLinkedin size={22} />
             </a>
           </div>
         </motion.div>
@@ -122,10 +122,10 @@ function Hero() {
           <div className="relative">
 
             {/* Glow */}
-            <div className="absolute inset-0 rounded-full bg-[#C8BC55] blur-[100px] opacity-25" />
+            <div className="absolute inset-0 rounded-full bg-[#C8BC55] blur-[80px] opacity-25" />
 
             {/* Profile Ring */}
-            <div className="w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] lg:w-[460px] lg:h-[460px] xl:w-[500px] xl:h-[500px] rounded-full bg-gradient-to-r from-[#8C8426] via-[#C8BC55] to-[#5A561F] p-[6px] shadow-2xl">
+            <div className="w-[280px] h-[280px] sm:w-[330px] sm:h-[330px] lg:w-[380px] lg:h-[380px] xl:w-[400px] xl:h-[400px] rounded-full bg-gradient-to-r from-[#8C8426] via-[#C8BC55] to-[#5A561F] p-[5px] shadow-2xl">
 
               <div className="w-full h-full rounded-full overflow-hidden bg-[#FAF8F1]">
                 <img
@@ -144,4 +144,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Hero;``

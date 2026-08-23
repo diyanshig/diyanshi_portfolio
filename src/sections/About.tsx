@@ -33,28 +33,30 @@ function About() {
   return (
     <section
       id="about"
-      className="py-32 lg:py-36 bg-[#FAF8F1] text-[#2C2C2C]"
+      className="py-14 lg:py-16 bg-[#FAF8F1] text-[#2C2C2C]"
     >
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20 lg:mb-24"
+          className="text-center mb-10 lg:mb-12"
         >
-          <p className="uppercase tracking-[0.3em] text-[#8C8426] font-bold text-lg lg:text-5xl">
+          <p className="uppercase tracking-[0.2em] text-[#8C8426] font-bold text-sm lg:text-base">
             ABOUT ME
           </p>
 
-          <h2 className="text-5xl sm:text-6xl lg:text-6xl font-black mt-5 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-3 leading-tight">
             Passionate About
             <span className="text-[#5A561F]"> Building Software</span>
           </h2>
 
-          <p className="max-w-5xl mx-auto mt-8 text-xl lg:text-[22px] leading-9 lg:leading-10 text-[#666]">
+          <div className="w-16 h-1 bg-[#8C8426] rounded-full mx-auto mt-4" />
+
+          <p className="max-w-3xl mx-auto mt-5 text-sm lg:text-base leading-7 text-[#666]">
             I'm Diyanshi Gupta, a Computer Science student specializing
             in Cybersecurity with a passion for Full Stack Development
             and Artificial Intelligence. I enjoy creating elegant,
@@ -64,35 +66,35 @@ function About() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-7 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
 
           {cards.map((card, index) => (
             <motion.div
               key={card.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
-                delay: index * 0.15,
+                delay: index * 0.1,
               }}
               whileHover={{
-                y: -10,
+                y: -6,
               }}
-              className="bg-white border border-[#D9D2B0] rounded-3xl p-9 lg:p-10 min-h-[310px] shadow-md hover:shadow-xl hover:border-[#8C8426] transition-all duration-300"
+              className="bg-white border border-[#D9D2B0] rounded-2xl p-5 min-h-[200px] shadow-md hover:shadow-xl hover:border-[#8C8426] transition-all duration-300"
             >
               {/* Icon */}
-              <div className="w-18 h-18 lg:w-20 lg:h-20 rounded-2xl bg-[#5A561F] text-white flex items-center justify-center text-4xl mb-7">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-[#5A561F] text-white flex items-center justify-center text-xl lg:text-2xl mb-4">
                 {card.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl lg:text-[26px] font-bold mb-5 leading-snug">
+              <h3 className="text-lg lg:text-xl font-bold mb-2 leading-snug">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-lg lg:text-xl text-[#666] leading-8 lg:leading-9">
+              <p className="text-sm lg:text-base text-[#666] leading-6">
                 {card.text}
               </p>
             </motion.div>
